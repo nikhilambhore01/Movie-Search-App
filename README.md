@@ -1,4 +1,4 @@
-### Movie_Explore_App
+# Movie_Explore_App
 An Application built using React and Redux to explore movies.
 
 ## Features
@@ -10,9 +10,9 @@ An Application built using React and Redux to explore movies.
 - Thanks to Omdb API for functioning of search feature of the App
 
 ### Preview
-**Checkout the application here** 
+**Checkout the application here** [Demo](https://nikhilambhore01.github.io/Movie-Search-App/)
 
-[Demo](https://nikhilambhore01.github.io/Movie-Search-App/)
+
 
 
 # Getting Started with Create React App
