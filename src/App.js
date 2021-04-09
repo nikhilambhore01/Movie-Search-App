@@ -9,15 +9,6 @@ import "./App.css";
 
 class App extends React.Component {
   componentDidMount() {
-    // const { store } = this.props;
-    // store.subscribe(() => {
-    //   console.log("UPDATED");
-    //   this.forceUpdate();
-    // });
-    // // make Api Call
-    // // dispatch action
-    // store.dispatch(addMovies(data));
-
     this.props.dispatch(addMovies(moviesList));
 
     // console.log("STATE", this.props);
@@ -82,15 +73,7 @@ class App extends React.Component {
   }
 }
 
-// class AppWrapper extends React.Component {
-//   render() {
-//     return (
-//       <StoreContext.Consumer>
-//         {(store) => <App store={store} />}
-//       </StoreContext.Consumer>
-//     );
-//   }
-// }
+
 
 function mapStateToProps(state) {
   return {

@@ -5,7 +5,7 @@ import React from "react";
 import { addMovieToList, handleMovieSearch } from "../actions";
 
 import { connect } from "react-redux";
-// import { data } from "../data";
+
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -15,10 +15,19 @@ class Navbar extends React.Component {
     };
   }
 
-  handleSearchClick = () => {
+ 
+
+
+  handleSearchClick = (e) => {
     const { searchText } = this.state;
+    e.preventDefault();
+    
     this.props.dispatch(handleMovieSearch(searchText));
-    console.log("searchText : ", searchText);
+   
+    // console.log("searchText : ", this.state.searchText);
+    this.setState(() => ({
+      searchText: "",
+    }));
   };
 
   handleChange = (e) => {
@@ -27,28 +36,35 @@ class Navbar extends React.Component {
     });
   };
 
-  handleAddMovie = (movie, searchText) => {
-    console.log("Adding movie ", movie);
+  handleAddMovie = (movie ) => {
+      console.log("Adding movie ", movie);
     this.props.dispatch(addMovieToList(movie));
-    // this.setState({
-    //   showSearchResults: false
-    // });
-    this.setState({ searchText: " " });
-    console.log("searchText : ", searchText);
+    
   };
 
   render() {
     const { result: movie, showSearchResults } = this.props.search;
-    // console.log("Result : ", result);
+    
 
+    console.log("searchText : ", this.state.searchText);
     return (
       <div className="nav">
         <div className="heading"> Movies.com </div>
         <div className="search-container ">
-          <input type="text" onChange={this.handleChange} />
-          <button id="search-btn" onClick={this.handleSearchClick}>
-            Search
-          </button>
+          
+          <form>
+            <input
+               value={this.state.searchText}
+              onChange={this.handleChange}
+              type="text"
+            />
+            <input
+              id="search-btn"
+              onClick={this.handleSearchClick}
+              type="submit"
+              value="SEARCH"
+            />
+          </form>
 
           {showSearchResults && (
             <div className="search-results">
@@ -67,19 +83,8 @@ class Navbar extends React.Component {
       </div>
     );
   }
-}
+};
 
-// class NavbarWrapper extends React.Component {
-//   render() {
-//     return (
-//       <StoreContext.Consumer>
-//         {(store) => (
-//           <Navbar dispatch={store.dispatch} search={this.props.search} />
-//         )}
-//       </StoreContext.Consumer>
-//     );
-//   }
-// }
 
 function mapStateToProps({ search }) {
   return {
