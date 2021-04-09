@@ -1,3 +1,20 @@
+# Movie_Explore_App
+An Application built using React and Redux to explore movies.
+
+## Features
+- Lists Poster, preview and ratings of the movie
+- Can add favourite movies
+- Remove from favourite list
+- Uses Omdb API to search movies
+- Can add search result to movie list
+- Thanks to Omdb API for functioning of search feature of the App
+
+### Preview
+**Checkout the application here** [Demo](https://nikhilambhore01.github.io/Movie-Search-App/)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
