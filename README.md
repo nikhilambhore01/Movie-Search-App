@@ -2,7 +2,7 @@
 An Application built using React and Redux to explore movies.
 
 ## Features
-- Lists Poster, preview and ratings of the movie
+- Lists, preview and ratings of the movie
 - Can add favourite movies
 - Remove from favourite list
 - Uses Omdb API to search movies
@@ -10,7 +10,7 @@ An Application built using React and Redux to explore movies.
 - Thanks to Omdb API for functioning of search feature of the App
 
 ### Preview
-**Checkout the application here** [Demo](https://nikhilambhore01.github.io/Movie-Search-App/)
+[Demo](https://nikhilambhore01.github.io/Movie-Search-App/)
 
 
 
